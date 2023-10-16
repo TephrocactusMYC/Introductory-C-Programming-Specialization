@@ -110,27 +110,11 @@ card_t card_from_letters(char value_let, char suit_let) {
     assert_card_valid(temp);
     return temp;
 }
-
 card_t card_from_num(unsigned c) {
+  suit_t suit_c = c / 13;
+  unsigned value_c = c % 13 + 2;
   card_t temp;
-  
-  if (c <= 12) {
-    temp.value = c +2;
-    temp.suit = SPADES;
-  }
-  else if (c > 12 && c <= 25) {
-    temp.value = c % 13+2;
-    temp.suit = HEARTS;
-  }
-  else if (c > 25 && c <= 38) {
-    temp.value = c % 13+2;
-    temp.suit = DIAMONDS;
-  }
-  else {
-    temp.value = c % 13+2;
-    temp.suit = CLUBS;
-  }
-  assert_card_valid(temp);
-
+  temp.suit = suit_c;
+  temp.value = value_c;
   return temp;
 }

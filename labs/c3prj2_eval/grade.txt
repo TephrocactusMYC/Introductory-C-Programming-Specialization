@@ -1,0 +1,6 @@
+Grading at Mon 16 Oct 2023 08:42:50 AM UTC
+Compiling your code
+rm -f test poker cards.o my-test-main.o *~
+'make test-eval' failed.
+
+Overall Grade: F
